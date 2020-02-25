@@ -18,9 +18,8 @@ public class CityController {
     CityService cityService;
 
     @GetMapping(value = "/search/{onboardingCity}")
-    public List<City> findCity(@PathVariable String onboardingCity, HttpServletResponse response) {
-        final List<City> byCity = cityService.findByCity(onboardingCity);
-        return byCity;
+    public List<City> findCity(@PathVariable String onboardingCity) {
+        return cityService.findByCity(onboardingCity);
     }
 
 }
