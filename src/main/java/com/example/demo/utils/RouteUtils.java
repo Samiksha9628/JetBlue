@@ -5,13 +5,13 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.ResourceUtils;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Component
 public class RouteUtils {
+    private static Map<String, List<City>> cityMap = new HashMap<>();
     private List<City> cityList = new ArrayList<>();
 
     public List getCityList() {

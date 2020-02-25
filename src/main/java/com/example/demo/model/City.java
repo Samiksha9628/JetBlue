@@ -2,7 +2,7 @@ package com.example.demo.model;
 
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class City {
 	private String city1;
     private String city2;
