@@ -1,15 +1,20 @@
 package com.example.demo;
 
-import com.example.demo.utils.RouteUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
-import javax.annotation.PostConstruct;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 
 @SpringBootApplication
+@EnableSwagger2
+@Configuration
+@ComponentScan
+@PropertySource(value = "classpath:application.properties")
 public class JetblueApplication {
 
     public static void main(String[] args) {
