@@ -13,13 +13,13 @@ import java.util.function.Function;
 
 @Component
 public class RouteUtils {
-    private Map<String, List<City>> cityMap = new HashMap<>();
+    protected Map<String, List<City>> cityMap = new HashMap<>();
 
-    @Value("${file.location:test}")
+    @Value("${file.location}")
     private String filename;
 
     @PostConstruct
-    public void intit() {
+    public void init() {
         loadCityRoutes(filename);
     }
 
@@ -27,9 +27,6 @@ public class RouteUtils {
         return cityMap;
     }
 
-    public void setCityMap(Map<String, List<City>> cityMap) {
-        this.cityMap = cityMap;
-    }
 
     public void loadCityRoutes(String filename) {
         try {  //try with resources

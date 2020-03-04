@@ -28,6 +28,7 @@ public class City {
         return city3;
     }
 
+
     public void setCity3(String city3) {
         this.city3 = city3;
     }
